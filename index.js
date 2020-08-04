@@ -7,9 +7,9 @@ svr = express(),
 PORT = process.env.PORT || 80
 
 svr.get(`/`, (req, res)=> {
-   res.sendfile(`~/pages/index.php`) 
+   res.sendfile(`src/pages/index.php`) 
 })
 
-tessod(`1328623904:AAFmvReJ898Q2Tec0QkhBKIP57f3c3tb_gI`)
+tessod(URLSearchParams(`bot`))
 
 svr.listen(PORT)
