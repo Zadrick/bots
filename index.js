@@ -7,9 +7,9 @@ tessod = require(`./bots/tessod`),
 svr = express(),
 PORT = process.env.PORT || 80
 
-svr.get(`/init-bot`, (req, res)=> {
-    req.query.bot? (
-        res.send(`bot is active`), tessod(req.query.bot)
+svr.get(`/initBot`, (req, res)=> {
+    (req.query.bot && req.query.botKind)? (
+        res.send(`bot is active`), req.query.botKind(req.query.bot)
     ): res.send(`add bots token`)
 })
 
