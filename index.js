@@ -9,8 +9,8 @@ PORT = process.env.PORT || 80
 
 svr.get(`/initBot`, (req, res)=> {
     console.log(req.query)
-    (req.query.bot && req.query.botKind)? (
-        res.send(`bot is active`), [req.query.botKind](req.query.token)
+    req.query.token? (
+        res.send(`bot is active`), tessod(req.query.token)
     ): res.send(`add bot kind and bot token`)
 })
 
