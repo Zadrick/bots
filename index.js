@@ -7,7 +7,7 @@ svr = express(),
 PORT = process.env.PORT || 80,
 mongo = r('mongodb').MongoClient,
 //bots
-helloBot = r(`./bots/helloBot`),
+welcomeBot = r(`./bots/welcomeBot`),
 badWordsBot = r(`./bots/badWordsBot`)
 
 svr.use(express.static(`public`))
@@ -17,7 +17,7 @@ mongo.connect(`mongodb+srv://tesla022:102410241024Sam@cluster0.kffk8.mongodb.net
 })
 
 svr.get(`/`, (req, res)=> {
-    fs.readFile(`public/pages/index.html`, `utf8`, (err, data)=> {
+    fs.readFile(`public/index.html`, `utf8`, (err, data)=> {
         err? console.log(err): res.send(data)
     })
 })

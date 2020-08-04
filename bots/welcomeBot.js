@@ -1,4 +1,4 @@
-let helloBot = token=> {
+let welcomeBot = token=> {
     const Telegraf = require(`telegraf`),
 
     bot = new Telegraf(token)
@@ -13,4 +13,4 @@ let helloBot = token=> {
     })
 }
 
-module.exports = helloBot
+module.exports = welcomeBot

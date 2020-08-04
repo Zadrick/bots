@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+.point {
+    cursor: pointer;
+}
+
+a:hover {
+    border-bottom: 1px solid #00ff37;
+}
+
+header {
+    padding: 10px;
+    background: #0f002c;
+}
+
+#body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1e0055;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+}
+
+input, select {
+    margin: 2px;
+    padding: 0 20px;
+    width: 80%;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #ff5e00;
+    border-radius: 3px;
+    background: #1e0055;
+    font-size: 15px;
+}
+
+input:hover, select:hover {
+    border: 1px solid #ffd000;
+}
+
+input:hover, select:hover {
+    transition: .3s;
+    background: #0f002c;
+}
