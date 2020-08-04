@@ -1,3 +1,5 @@
+const { Mongoose } = require("mongoose")
+
 const r = (f)=> {
     return require(f)
 },
@@ -11,9 +13,8 @@ welcomeBot = r(`./bots/welcomeBot`),
 badWordsBot = r(`./bots/badWordsBot`)
 
 svr.use(express.static(`public`))
-mongo.connect(`mongodb+srv://tesla022:102410241024Sam>@cluster0.lwr3p.mongodb.net/Cluster0?retryWrites=true&w=majority`, (err, db)=> {
-    err? console.error(err):
-    console.log(`success`)
+mongo.connect(`mongodb+srv://tesla022:102410241024Sam>@cluster0.lwr3p.mongodb.net/tessod`, { useUnifiedTopology: true }, async (err, db)=> {
+    console.log(`s`)
 })
 
 svr.get(`/`, (req, res)=> {
