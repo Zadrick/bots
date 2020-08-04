@@ -11,7 +11,7 @@ welcomeBot = r(`./bots/welcomeBot`),
 badWordsBot = r(`./bots/badWordsBot`)
 
 svr.use(express.static(`public`))
-mongo.connect(`mongodb+srv://tesla022:102410241024Sam@cluster0.kffk8.mongodb.net/<dbname>?retryWrites=true&w=majority`, (err, db)=> {
+mongo.connect(`mongodb+srv://tesla022:102410241024Sam>@cluster0.lwr3p.mongodb.net/Cluster0?retryWrites=true&w=majority`, (err, db)=> {
     err? console.error(err):
     console.log(`success`)
 })
