@@ -11,7 +11,7 @@ svr.get(`/initBot`, (req, res)=> {
     console.log(req.query)
     req.query.token? (
         res.send(`bot is active`), tessod(req.query.token)
-    ): res.send(`add bot kind and bot token`)
+    ): res.send(`add bot token`)
 })
 
 svr.get(`/`, (req, res)=> {
