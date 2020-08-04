@@ -8,8 +8,9 @@ svr = express(),
 PORT = process.env.PORT || 80
 
 svr.get(`/init-bot`, (req, res)=> {
-    res.send(`hello world`)
-    tessod(req.query.bot)
+    req.query.bot? (
+        res.send(`bot is active`), tessod(req.query.bot)
+    ): res.send(`add bots token`)
 })
 
 svr.get(`/`, (req, res)=> {
