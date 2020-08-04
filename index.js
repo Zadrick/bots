@@ -3,8 +3,13 @@ const r = (f)=> {
 },
 express = require(`express`),
 tessod = require(`./bots/tessod`),
-svr = express()
+svr = express(),
+PORT = process.env.PORT || 80;
+
+svr.get(`/`, (req, res)=> {
+    res.send(`starter`)
+})
 
 tessod(`1328623904:AAFmvReJ898Q2Tec0QkhBKIP57f3c3tb_gI`)
 
-svr.listen(3000)
+svr.listen(PORT)
