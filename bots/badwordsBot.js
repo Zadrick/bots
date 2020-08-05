@@ -1,4 +1,4 @@
-let badwordsBot = token=> {
+let badWordsBot = token=> {
     const Telegraf = require(`telegraf`),
 
     bot = new Telegraf(token)
@@ -12,4 +12,4 @@ let badwordsBot = token=> {
     })
 }
 
-module.exports = badwordsBot
+module.exports = badWordsBot

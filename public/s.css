@@ -43,6 +43,7 @@ input, select {
     box-sizing: border-box;
     border: 1px solid var(--blue);
     border-radius: 3px;
+    color: #000;
     font-size: 15px;
 }
 
