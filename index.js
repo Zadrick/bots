@@ -6,8 +6,8 @@ svr = express(),
 PORT = process.env.PORT || 80,
 fs = r(`fs`),
 mongo = r(`mongoose`),
-welcomeBot = r(`./bots/welcomeBot`),
-badWordsBot = r(`./bots/badWordsBot`)
+welcomeBot = r(`./bots/welcomeBot.js`),
+badWordsBot = r(`./bots/badWordsBot.js`)
 
 svr.use(express.static(`public`))
 svr.use(express.urlencoded({extended: false}))
