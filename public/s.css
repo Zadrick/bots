@@ -4,52 +4,48 @@
     text-decoration: none;
     outline: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
+    --blue: #0011ff;
+    color: var(--blue);
 }
 
 .point {
     cursor: pointer;
 }
 
-a:hover {
-    border-bottom: 1px solid #00ff37;
-}
-
 header {
+    margin: 10px 0;
     padding: 10px;
-    background: #0f002c;
 }
 
-#body {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #1e0055;
+    background: #fff;
 }
 
 form {
-    width: 100%;
+    position: relative;
+    padding: 70px 0;
+    width: 80%;
     max-width: 400px;
+    box-shadow: var(--blue) 0 0 5px;
+    border: 1px solid var(--blue);
+    border-radius: 5px;
 }
 
 input, select {
-    margin: 2px;
-    padding: 0 20px;
-    width: 80%;
+    margin: 10px 0;
+    padding: 0 10px;
+    width: 70%;
     height: 30px;
     box-sizing: border-box;
-    border: 1px solid #ff5e00;
+    border: 1px solid var(--blue);
     border-radius: 3px;
-    background: #1e0055;
     font-size: 15px;
 }
 
 input:hover, select:hover {
-    border: 1px solid #ffd000;
-}
-
-input:hover, select:hover {
-    transition: .3s;
-    background: #0f002c;
+    border: 1px solid #0f002c;
 }

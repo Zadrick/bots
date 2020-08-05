@@ -6,20 +6,20 @@
     <link rel=stylesheet href=s.css>
     <title>Tessod</title>
 </head>
-<body align=center>
-    <header>
-        <h1>
-            <a href='/'>TESSOD</a>
-        </h1>
-    </header>
-    <div id=body>
+<body>
+    <div id=body align=center>
+        <header>
+            <h1>
+                <a href='/'>TESSOD</a>
+            </h1>
+        </header>
         <form method=post>
-            <select class=point name=botKind>
+            <select class=point name=botKind required>
                 <option value=welcomeBot>Welcome Bot</option>
                 <option value=badWordsBot>Bad Words Bot</option>
             </select>
-            <input name=botToken type=text>
-            <input class=point value=create type=submit>
+            <input name=botToken type=text placeholder=Token required>
+            <input class=point value=Сreate type=submit>
         </form>
     </div>
 </body>
