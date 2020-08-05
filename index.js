@@ -9,8 +9,6 @@ mongo = r(`mongoose`),
 welcomeBot = r(`./bots/welcomeBot`),
 badWordsBot = r(`./bots/badWordsBot`)
 
-badWordsBot(`1328623904:AAFmvReJ898Q2Tec0QkhBKIP57f3c3tb_gI`)
-
 svr.use(express.static(`public`))
 svr.use(express.urlencoded({extended: false}))
 
@@ -25,7 +23,6 @@ mongo.connect(`mongodb+srv://tesla022:102410241024Sam@cluster0.lwr3p.mongodb.net
         res = db.collection(`welcome`).find()
         res.forEach(el => {
             welcomeBot(el.token)
-            console.log(el.token)
         });
         res = db.collection(`badWords`).find()
         res.forEach(el => {

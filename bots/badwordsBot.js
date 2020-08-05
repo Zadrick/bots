@@ -10,6 +10,7 @@ let badWordsBot = token=> {
                 `, {reply_to_message_id: ctx.message.message_id})
         ctx.deleteMessage(ctx.message.message_id)
     })
+    bot.launch()
 }
 
 module.exports = badWordsBot

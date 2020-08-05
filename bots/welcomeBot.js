@@ -11,6 +11,7 @@ let welcomeBot = token=> {
             read rules of group, and keep to follo them (:
         `, {reply_to_message_id: ctx.message.message_id})
     })
+    bot.launch()
 }
 
 module.exports = welcomeBot
