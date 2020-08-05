@@ -1,9 +1,25 @@
-const express = require(`express`),
-app = express(),
-PORT = process.env.PORT || 80
+const { Mongoose } = require("mongoose")
 
-app.get(`/`, (req, res)=> {
-    res.send(`we`)
+const r = f=> {
+    return require(f)
+},
+express = r(`express`),
+svr = express(),
+PORT = process.env.PORT || 80,
+mongo = r(`mongoose`),
+welcomBot = r(`./bots/welcomeBot`),
+badWordsBot = r(`./bots/badWordsBot`)
+
+svr.use(express.static(`public`))
+svr.use(express.urlencoded())
+
+svr.get(`/`, (req, res)=> {
+    res.sendFile(`public/index.htm`)
 })
 
-app.listen(PORT)
+svr.post(`/`, (req, res)=> {
+    res.sendFile(`public/index.htm`)
+    console.log(req.body)
+})
+
+svr.listen(PORT)
